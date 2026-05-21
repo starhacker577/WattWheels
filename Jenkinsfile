@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/starhacker577/WattWheels.git'
-            }
-        }
-
         stage('Build Backend Docker Image') {
             steps {
                 bat 'docker build -t wattwheels-backend ./backend'
